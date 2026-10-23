@@ -1,0 +1,55 @@
+{
+  "name": "dsh-aqua-dsh021",
+  "version": "1.3.1-dsh021.1",
+  "description": "Aqua glassmorphism theme for DeepSeek Harness, adapted for DSH 0.2.1-rc.2 (slot/module rename + conversation background fix)",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./invariant": "./lib/invariant.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "NOTICE.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-store",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-theme",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-primitives"
+      ],
+      "platform": "web"
+    }
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "theme",
+    "glassmorphism",
+    "aqua"
+  ],
+  "license": "AGPL-3.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/060703Hyj/dsh-aqua-dsh021.git"
+  },
+  "bugs": {
+    "url": "https://github.com/060703Hyj/dsh-aqua-dsh021/issues"
+  },
+  "homepage": "https://github.com/060703Hyj/dsh-aqua-dsh021#readme",
+  "engines": {
+    "dsh": ">=0.2.1-rc.2 <0.3.0"
+  }
+}

@@ -1,0 +1,11 @@
+# dsh-aqua-dsh021 的组合包（bundle）补丁。
+#
+# dsh 按 dsh.profile.bundles 的顺序逐层套用每个组合包的补丁；这一层只插一行插件。
+# name 必须与 package.json 的 name 完全一致（宿主按包名生成客户端模块行，
+# 不一致会报 "loaded without registering"）。
+#
+# 想改默认值：改这个文件（升级时会被覆盖），或改自己 profile 里的 cordis.patch.yml
+# （用户层最后套用，按 id 覆盖整行 config，更稳）。
+- insert:
+    - id: ui-aqua
+      name: 'dsh-aqua-dsh021'
